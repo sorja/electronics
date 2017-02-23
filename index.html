@@ -1,0 +1,617 @@
+<html>
+   <head>
+     <script src="http://www.jimsproch.com/react/future/react.js"></script>
+     <script src="http://www.jimsproch.com/react/future/react-dom.js"></script>
+     <script src="http://www.jimsproch.com/react/babel-browser.js"></script>
+     <style>
+         body {
+             text-size: 14px;
+             font-family: 'Verdana', monospace;
+         }
+         table {
+             width: 100%
+         }
+         #main {
+             width: 720px;
+             margin:0 18%;
+         }
+         td {
+             text-align: center;
+         }
+         thead {
+             background-color: #333;
+             color: #eee;
+         }
+         .even {
+             background-color: #eee;
+         }
+         .more {
+             cursor: pointer;
+         }
+     </style>
+   </head>
+   <body>
+     <div id="container" />
+     <script type="text/babel">
+    var Main = React.createClass({
+    getInitialState: function() {
+        return {
+            items: [
+                {
+                    name: "Resistor",
+                    value: "10",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "22",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "47",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "100",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "150",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "200",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "220",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "270",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "330",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "470",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "510",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "680",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "1k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "2k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "2.2k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "3.3k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "4.7k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "5.1k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "6.8k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "10k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "20k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "47k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "51k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "68k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "220k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "300k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "470k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "680k",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Resistor",
+                    value: "1M",
+                    unit: "Ω",
+                    count: 10,
+                    other: "1/4 1%",
+                    link: "http://www.ebay.com/itm/152234064994?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "0.1u",
+                    unit: "F",
+                    count: 15,
+                    other: "50V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "0.22u",
+                    unit: "F",
+                    count: 15,
+                    other: "50V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "0.47u",
+                    unit: "F",
+                    count: 15,
+                    other: "50V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "1u",
+                    unit: "F",
+                    count: 15,
+                    other: "50V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "2.2u",
+                    unit: "F",
+                    count: 15,
+                    other: "50V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "3.3u",
+                    unit: "F",
+                    count: 15,
+                    other: "50V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "4.7u",
+                    unit: "F",
+                    count: 15,
+                    other: "50V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "10u",
+                    unit: "F",
+                    count: 15,
+                    other: "25V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "22u",
+                    unit: "F",
+                    count: 15,
+                    other: "25V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "33u",
+                    unit: "F",
+                    count: 15,
+                    other: "16V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "47u",
+                    unit: "F",
+                    count: 10,
+                    other: "16V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "47u",
+                    unit: "F",
+                    count: 10,
+                    other: "25V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "100u",
+                    unit: "F",
+                    count: 10,
+                    other: "25V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "100u",
+                    unit: "F",
+                    count: 10,
+                    other: "16V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                },
+                {
+                    name: "Capacitor",
+                    value: "220u",
+                    unit: "F",
+                    count: 10,
+                    other: "10V",
+                    link: "http://www.ebay.com/itm/142042117970?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                    extra: "\
+                    Specification:\
+1.Wattage: 1W\
+2. Diode/rectifier type: DO-41\
+3. RoHS: Yes\
+4. Standard Recovery Power Rectifier\
+5. Repetitive Reverse Voltage Max, Vrrm: 50V\
+6. Forward Current Avg Rectified, IF(AV): 1A\
+7. Forward Surge Current Max, Ifsm: 30A\
+8. Forward Voltage Max, VF: 1.1V\
+9. Current Rating: 1A\
+10. Mode: IN5822, IN5408, IN5399, FR207, FR107, IN5819, IN4007, IN4148\
+                    "
+                },
+                {
+                    name: "Diode",
+                    value: "IN4148",
+                    unit: "",
+                    count: 25,
+                    other: "1W / VRRM: 50V",
+                    link: "http://www.ebay.com/itm/371533559861?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                    extra: "\
+                    Specification:\
+1.Wattage: 1W\
+2. Diode/rectifier type: DO-41\
+3. RoHS: Yes\
+4. Standard Recovery Power Rectifier\
+5. Repetitive Reverse Voltage Max, Vrrm: 50V\
+6. Forward Current Avg Rectified, IF(AV): 1A\
+7. Forward Surge Current Max, Ifsm: 30A\
+8. Forward Voltage Max, VF: 1.1V\
+9. Current Rating: 1A\
+10. Mode: IN5822, IN5408, IN5399, FR207, FR107, IN5819, IN4007, IN4148\
+                    "
+                },
+                {
+                    name: "Diode",
+                    value: "IN4007 ",
+                    unit: "",
+                    count: 25,
+                    other: "1W / VRRM: 50V",
+                    link: "http://www.ebay.com/itm/371533559861?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                    extra: "\
+                    Specification:\
+1.Wattage: 1W\
+2. Diode/rectifier type: DO-41\
+3. RoHS: Yes\
+4. Standard Recovery Power Rectifier\
+5. Repetitive Reverse Voltage Max, Vrrm: 50V\
+6. Forward Current Avg Rectified, IF(AV): 1A\
+7. Forward Surge Current Max, Ifsm: 30A\
+8. Forward Voltage Max, VF: 1.1V\
+9. Current Rating: 1A\
+10. Mode: IN5822, IN5408, IN5399, FR207, FR107, IN5819, IN4007, IN4148\
+                    "
+                },
+                {
+                    name: "Diode",
+                    value: "IN5819 ",
+                    unit: "",
+                    count: 10,
+                    other: "1W / VRRM: 50V",
+                    link: "http://www.ebay.com/itm/371533559861?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                    extra: "\
+                    Specification:\
+1.Wattage: 1W\
+2. Diode/rectifier type: DO-41\
+3. RoHS: Yes\
+4. Standard Recovery Power Rectifier\
+5. Repetitive Reverse Voltage Max, Vrrm: 50V\
+6. Forward Current Avg Rectified, IF(AV): 1A\
+7. Forward Surge Current Max, Ifsm: 30A\
+8. Forward Voltage Max, VF: 1.1V\
+9. Current Rating: 1A\
+10. Mode: IN5822, IN5408, IN5399, FR207, FR107, IN5819, IN4007, IN4148\
+                    "
+                },
+                {
+                    name: "Diode",
+                    value: "IN5399 ",
+                    unit: "",
+                    count: 10,
+                    other: "1W / VRRM: 50V",
+                    link: "http://www.ebay.com/itm/371533559861?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                    extra: "\
+                    Specification:\
+1.Wattage: 1W\
+2. Diode/rectifier type: DO-41\
+3. RoHS: Yes\
+4. Standard Recovery Power Rectifier\
+5. Repetitive Reverse Voltage Max, Vrrm: 50V\
+6. Forward Current Avg Rectified, IF(AV): 1A\
+7. Forward Surge Current Max, Ifsm: 30A\
+8. Forward Voltage Max, VF: 1.1V\
+9. Current Rating: 1A\
+10. Mode: IN5822, IN5408, IN5399, FR207, FR107, IN5819, IN4007, IN4148\
+                    "
+                },
+                {
+                    name: "Diode",
+                    value: "FR107 ",
+                    unit: "",
+                    count: 10,
+                    other: "1W / VRRM: 50V",
+                    link: "http://www.ebay.com/itm/371533559861?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                    extra: "\
+                    Specification:\
+1.Wattage: 1W\
+2. Diode/rectifier type: DO-41\
+3. RoHS: Yes\
+4. Standard Recovery Power Rectifier\
+5. Repetitive Reverse Voltage Max, Vrrm: 50V\
+6. Forward Current Avg Rectified, IF(AV): 1A\
+7. Forward Surge Current Max, Ifsm: 30A\
+8. Forward Voltage Max, VF: 1.1V\
+9. Current Rating: 1A\
+10. Mode: IN5822, IN5408, IN5399, FR207, FR107, IN5819, IN4007, IN4148\
+                    "
+                },
+                {
+                    name: "Diode",
+                    value: "FR207 ",
+                    unit: "",
+                    count: 10,
+                    other: "1W / VRRM: 50V",
+                    link: "http://www.ebay.com/itm/371533559861?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                    extra: "\
+                    Specification:\
+1.Wattage: 1W\
+2. Diode/rectifier type: DO-41\
+3. RoHS: Yes\
+4. Standard Recovery Power Rectifier\
+5. Repetitive Reverse Voltage Max, Vrrm: 50V\
+6. Forward Current Avg Rectified, IF(AV): 1A\
+7. Forward Surge Current Max, Ifsm: 30A\
+8. Forward Voltage Max, VF: 1.1V\
+9. Current Rating: 1A\
+10. Mode: IN5822, IN5408, IN5399, FR207, FR107, IN5819, IN4007, IN4148\
+                    "
+                },
+                {
+                    name: "Diode",
+                    value: "IN5408 ",
+                    unit: "",
+                    count: 5,
+                    other: "1W / VRRM: 50V",
+                    link: "http://www.ebay.com/itm/371533559861?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                    extra: "\
+                    Specification:\
+1.Wattage: 1W\
+2. Diode/rectifier type: DO-41\
+3. RoHS: Yes\
+4. Standard Recovery Power Rectifier\
+5. Repetitive Reverse Voltage Max, Vrrm: 50V\
+6. Forward Current Avg Rectified, IF(AV): 1A\
+7. Forward Surge Current Max, Ifsm: 30A\
+8. Forward Voltage Max, VF: 1.1V\
+9. Current Rating: 1A\
+10. Mode: IN5822, IN5408, IN5399, FR207, FR107, IN5819, IN4007, IN4148\
+                    "
+                },
+                {
+                    name: "Diode",
+                    value: "IN5822 ",
+                    unit: "",
+                    count: 5,
+                    other: "1W / VRRM: 50V",
+                    link: "http://www.ebay.com/itm/371533559861?_trksid=p2060353.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT",
+                    extra: "\
+                    Specification:\
+1.Wattage: 1W\
+2. Diode/rectifier type: DO-41\
+3. RoHS: Yes\
+4. Standard Recovery Power Rectifier\
+5. Repetitive Reverse Voltage Max, Vrrm: 50V\
+6. Forward Current Avg Rectified, IF(AV): 1A\
+7. Forward Surge Current Max, Ifsm: 30A\
+8. Forward Voltage Max, VF: 1.1V\
+9. Current Rating: 1A\
+10. Mode: IN5822, IN5408, IN5399, FR207, FR107, IN5819, IN4007, IN4148\
+                    "
+                },
+            ]
+        };
+    },
+    render: function() {
+        console.log(this, this.state)
+        return <div id="main">
+                <h1>Hello, Electronics</h1>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Unit</th>
+                        <th>Name</th>
+                        <th>Value</th>
+                        <th>Count</th>
+                        <th>Other</th>
+                        <th>Link</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                {
+                    this.state.items.map(
+                        (val, i) => (
+                            <tr key={i} className={i%2==0 ? 'even' : 'odd'}>
+                                <td>{val.unit}</td>
+                                <td>{val.name}</td>
+                                <td>{val.value}</td>
+                                <td>{val.count}</td>
+                                <td>{
+                                        val.extra ? (<span className="more" title={val.extra} > more </span>) : <span>{val.other}</span>
+                                    }
+                                    </td>
+                                <td><a href={val.link}> Click </a> </td>
+                            </tr>
+                        )
+                    )
+                }
+                    </tbody>
+                </table>
+            </div>
+    }
+    });
+    ReactDOM.render(<div><Main/></div>, document.getElementById('container'));
+     </script>
+   </body>
+ </html>
