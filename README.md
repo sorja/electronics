@@ -1,2 +1,3 @@
 # Electronics
-## Just a inventory of the current parts
+Just an inventory of the current parts  
+live @ https://electronics.netlify.com/
