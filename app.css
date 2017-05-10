@@ -1,0 +1,36 @@
+body {
+    font-size: 14px;
+    font-family: 'Verdana', monospace;
+}
+
+.x {
+    width: 45vw;
+    display: block;
+    margin: 0 auto;
+    overflow-x: scroll;
+}
+
+label {
+    font-size: 1.3rem;
+}
+input {
+    padding: .5rem;
+}
+
+li {
+    text-align: justify;
+}
+
+li:nth-child(even) {
+    color: #333;
+    background-color: #eee;
+}
+
+li:nth-child(odd) {
+    background-color: #bbb;
+    color: #333;
+}
+
+.more {
+    cursor: pointer;
+}
