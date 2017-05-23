@@ -147,7 +147,8 @@ getItems = () => {
                 Capacitor 47u
                 Capacitor 100u
                 Capacitor 100u
-                Capacitor 220u`.split("\n")
+                Capacitor 220u
+                LM393 chip high voltage high current dual differential comparator 10 pcs/lot`.split("\n")
 }
 const renderList = (to, arr, el) => {
     to.innerHTML = null
