@@ -4,7 +4,22 @@ ol.id = "list"
 document.getElementById("container").appendChild(ol)
 // thanks chrome for xorigin
 getItems = () => {
-    return `5Pcs L7805 Lm7805 7805 +5V 1.5A Voltage Regulator Ic New F
+    return `Soil Humidity Hygrometer Moisture Detection Sensor Module Arduino With Wires Hot
+                1 ATTINY85-20PU IC MCU 8BIT 8KB FLASH 8DIP New Good quality D34
+                1PCS New ATTINY85-20PU ATMEL DIP-8 Tiny85-20PU CHIP IC
+                1PCS PCF8591 AD/DA converter module analog to digital to analog conversion Ardui
+                Digital PCF8591 AD/DA Conversion of to Analog Converter Module Temperature NEW L
+                0.86" 0.86in White OLED Display Module 96x32 For Arduino
+                20 Pcs USB Female Type A 4-Pin DIP Right Angle Plug Jack Socket Connector LW
+                5 Pcs Slide Type Switch Module 2.54mm 6-Bit 6 Position Way DIP Red Pitch NEW
+                5PCS FQP30N06L FQP30N06 60V LOGIC N-Channel MOSFET TO-220 BS1
+                10Pcs IRLZ44N MOSFET N-CH 55V 47A TO-220AB New
+                50Pcs 2N2222 NPN Transistor TO-92 2N2222A 2N2222
+                1PCS/5PCS/10PC 10W RGB LED Chip Bulb High Power Lamp SMD Chips For Energy Saving
+                New Agile 2~6 Multicore Cable Points & Signal Small Power Data AUTO CAR Wire
+                New Flexible 6 ore 5m meter Cable Points & Signal Small Power Data AUTO CAR Wire
+                New Flexible 4 core 24awg 2m metersppppppp Cable Points & Signal Small Power Data AUTO CAR Wire
+                5Pcs L7805 Lm7805 7805 +5V 1.5A Voltage Regulator Ic New F
                 2Pcs Tl074 Tl074cn Op Amp Quad Jfet Dip-14 Ic New H
                 5PCS IC TL072CP TL072 DIP-8 chorus delay OP AMPS NEW 
                 10Pcs Lm336-2.5V Lm336 Voltage Reference Diode 2.5V To-92 Voltage Regulator Ne Z
